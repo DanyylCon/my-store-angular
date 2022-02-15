@@ -1,1 +1,7 @@
-<p>product-list works!</p>
+<h1>Products</h1>
+
+<div *ngFor="let product of products">
+    <h3>{{[product.name]}}</h3>
+    <p>Price: {{product.price}}</p>
+    <img style="height: 20rem; width: 20rem;" src="{{product.url}}">
+</div>
