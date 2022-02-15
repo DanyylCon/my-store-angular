@@ -12,7 +12,7 @@ import { ProductsService } from '../services/products.service';
 export class ProductItemComponent implements OnInit {
 
   id: Number = 0;
-  product: Product;
+  product: Product = new Product;
 
   constructor(private activatedRoute: ActivatedRoute, private productsService: ProductsService) {   
   }
@@ -20,7 +20,7 @@ export class ProductItemComponent implements OnInit {
   ngOnInit(): void {
     this.id = this.activatedRoute.snapshot.params['id'];
     this.productsService.getProducts().subscribe(products => {
-      this.product = products.find(p => p.id === this.id) as Product
+      this.product = products.find(p => p.id == this.id) as Product
       console.log(this.product.url)
     })
     

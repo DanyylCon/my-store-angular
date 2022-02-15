@@ -1,7 +1,26 @@
 <h1>Products</h1>
 
 <div *ngFor="let product of products">
-    <h3>{{[product.name]}}</h3>
-    <p>Price: {{product.price}}</p>
-    <img style="height: 20rem; width: 20rem;" src="{{product.url}}">
+    <a href="/products/{{product.id}}"><img style="width: 20rem;" src="{{product.url}}"></a>
+    <br>
+    <strong>{{[product.name]}}</strong>
+    <br>
+    <strong>Price: {{product.price}}</strong>
+    <br>
+    <select name="quantity" >
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select>
+    <br>
+    <button>Add to Cart</button>
+    <br>
+    
 </div>
