@@ -21,7 +21,6 @@ export class ProductItemComponent implements OnInit {
     this.id = this.activatedRoute.snapshot.params['id'];
     this.productsService.getProducts().subscribe(products => {
       this.product = products.find(p => p.id == this.id) as Product
-      console.log(this.product.url)
     })
     
 
