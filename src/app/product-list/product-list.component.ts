@@ -23,7 +23,7 @@ export class ProductListComponent implements OnInit {
     });
   };
 
-  addProduct(product: Product, quantity: number): void {
+  addProduct(product: Product): void {
     this.cartService.addProduct(product, this.selectedQuantity);
   };
 
@@ -33,7 +33,6 @@ export class ProductListComponent implements OnInit {
     }else{
       this.selectedQuantity = Number(event.target.value);
     }
-
   }
 
 }
