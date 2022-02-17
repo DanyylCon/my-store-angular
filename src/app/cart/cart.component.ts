@@ -16,6 +16,7 @@ export class CartComponent implements OnInit {
 
   ngOnInit(): void {
     this.cartProducts = this.cartService.getCartProducts();
+    this.total = this.cartService.total;
   }
 
 }
