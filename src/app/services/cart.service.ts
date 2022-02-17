@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Product } from '../models/Product';
 import { CartProduct } from '../models/CartProduct';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -43,5 +44,9 @@ export class CartService {
       this.total = this.total + (p.price * p.quantity);
     }
     this.total = Math.round(this.total * 100) / 100;
+  } 
+
+  getCartProducts(): CartProduct[] {
+    return this.cartProducts;
   }
 }
