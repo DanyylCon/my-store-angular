@@ -15,8 +15,14 @@ export class CartComponent implements OnInit {
   constructor(private cartService: CartService) { }
 
   ngOnInit(): void {
+    //get the cartProducts and total from the cart service
     this.cartProducts = this.cartService.getCartProducts();
     this.total = this.cartService.total;
   }   
+
+  //recalculate the total when it is changed in the cartItem child component
+  recalculateTotal(): void{
+    this.total = this.cartService.total;
+  }
 
 }
