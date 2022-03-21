@@ -1,16 +1,6 @@
 <section>
-    <div *ngFor="let cp of cartProducts">
-        <div>
-            <img src="{{cp.url}}" style="width: 10em;">
-        </div>
-        <div>
-            <h3>{{cp.name}}</h3>
-            <p>${{cp.price}}</p>
-            <label for="quantity">Quantity:</label>
-            <input type="number" name="quantity" value="{{cp.quantity}}" min="1" max="9">
-        </div>
-    </div>
-    <p>{{total}}</p>
+    <app-cart-item *ngFor="let item of cartProducts" [cartProduct]="item"></app-cart-item>
+    <p><strong>Total:</strong> ${{total}}</p>
 </section>
 
 

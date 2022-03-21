@@ -23,7 +23,7 @@ export class CartService {
     if(prodToAdd){
       //filter the array, remove the product 
       this.cartProducts = this.cartProducts.filter(p => p.id != prodToAdd.id);
-      //add the product again, but with the new supplied quanity (in case it changed)
+      //add the product again, but with the new supplied quantity (in case it changed)
       this.cartProducts.push( {id: prodToAdd.id, url: prodToAdd.url, name: prodToAdd.name, price: prodToAdd.price, quantity: quantity} );
     }else{
       //if the product is not already in the cart, add it to the cartProducts array
