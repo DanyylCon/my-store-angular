@@ -8,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class UserFormComponent implements OnInit {
 
   name: string = '';
+  address: string = '';
+  card: string = '';
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  submitForm(): void{
+
+  }
 }
