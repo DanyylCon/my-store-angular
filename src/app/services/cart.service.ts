@@ -8,6 +8,7 @@ import { CartProduct } from '../models/CartProduct';
 })
 export class CartService {
 
+  customerName: string = '';
   cartProducts: CartProduct[] = [];
   total: number = 0;
 

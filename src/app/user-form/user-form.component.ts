@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'app-user-form',
@@ -11,12 +13,13 @@ export class UserFormComponent implements OnInit {
   address: string = '';
   card: string = '';
 
-  constructor() { }
+  constructor(private router: Router, private cartService: CartService) { }
 
   ngOnInit(): void {
   }
 
   submitForm(): void{
-
+    this.cartService.customerName = this.name;
+    this.router.navigate(['confirmation']);
   }
 }

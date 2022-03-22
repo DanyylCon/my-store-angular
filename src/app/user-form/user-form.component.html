@@ -11,5 +11,5 @@
     <br>
     <input type="text" name="card" required minlength="16" maxlength="16" placeholder="Your 16 digit card number" [(ngModel)]="card" >
     <br>
-    <input type="submit" [disabled]="form.invalid" value="Submit">
+    <input type="button" [disabled]="form.invalid" (click)="submitForm()" value="Submit">
 </form>
