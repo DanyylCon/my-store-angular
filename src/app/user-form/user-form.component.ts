@@ -19,7 +19,13 @@ export class UserFormComponent implements OnInit {
   }
 
   submitForm(): void{
-    this.cartService.customerName = this.name;
-    this.router.navigate(['confirmation']);
+    //basic validation to check if cart is not empty, if it is not then
+    //pass the customer name to cartSerice and navigate to confirmation
+    if(this.cartService.cartProducts.length){
+      this.cartService.customerName = this.name;
+      this.router.navigate(['confirmation']);
+    }else{
+      alert("Please place something in your cart first!");
+    }
   }
 }

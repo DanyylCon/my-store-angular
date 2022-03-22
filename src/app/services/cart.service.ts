@@ -29,12 +29,10 @@ export class CartService {
     }else{
       //if the product is not already in the cart, add it to the cartProducts array
       this.cartProducts.push( {id: product.id, url: product.url, name: product.name, price: product.price, quantity: quantity} )
+      alert('Product was added to the cart!');
     }
     
     this.calculateTotal();
-
-    console.log(this.cartProducts);
-    console.log(this.total);
 
   }
 
