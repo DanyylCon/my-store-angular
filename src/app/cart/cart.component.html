@@ -2,6 +2,9 @@
     <app-cart-item *ngFor="let item of cartProducts" [cartProduct]="item" (quantityNotify)="recalculateTotal()"></app-cart-item>
     <p><strong>Total: ${{total}}</strong></p>
 </section>
+<section>
+    <app-user-form></app-user-form>
+</section>
 
 
 

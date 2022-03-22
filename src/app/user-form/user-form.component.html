@@ -1,0 +1,15 @@
+<form action="">
+    <label for="name">Full Name:</label>
+    <br>
+    <input type="text" name="name" placeholder="Your full name" [(ngModel)]="name">
+    <br>
+    <label for="address">Address:</label>
+    <br>
+    <input type="text" name="address" placeholder="Your full address" >
+    <br>
+    <label for="card">Credit Card Number:</label>
+    <br>
+    <input type="text" name="card" minlength="16" maxlength="16" placeholder="Your 16 digit card number">
+    <br>
+    <input type="submit" value="Submit">
+</form>

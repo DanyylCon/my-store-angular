@@ -9,6 +9,8 @@ import { ProductItemComponent } from './product-item/product-item.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { CartComponent } from './cart/cart.component';
 import { CartItemComponent } from './cart-item/cart-item.component';
+import { UserFormComponent } from './user-form/user-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,12 +19,14 @@ import { CartItemComponent } from './cart-item/cart-item.component';
     ProductItemComponent,
     NavBarComponent,
     CartComponent,
-    CartItemComponent
+    CartItemComponent,
+    UserFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
