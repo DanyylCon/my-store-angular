@@ -1,10 +1,13 @@
-<section>
-    <app-cart-item *ngFor="let item of cartProducts" [cartProduct]="item" (quantityNotify)="recalculateTotal()"></app-cart-item>
-    <p><strong>Total: ${{total}}</strong></p>
-</section>
-<section>
-    <app-user-form></app-user-form>
-</section>
+<div class="container">
+    <section class="cart-products">
+        <app-cart-item *ngFor="let item of cartProducts" [cartProduct]="item" (quantityNotify)="recalculateTotal()"></app-cart-item>
+    </section>
+    
+    <section class="user-form">
+        <app-user-form></app-user-form>
+        <p><strong>Total: ${{total}}</strong></p>
+    </section>
+</div>
 
 
 

@@ -1,9 +1,9 @@
 <div>
-    <img src="{{cartProduct.url}}" style="width: 10em;">
+    <img src="{{cartProduct.url}}" >
 </div>
 <div>
-    <h3>{{cartProduct.name}}</h3>
+    <h5>{{cartProduct.name}}</h5>
     <p>${{cartProduct.price}}</p>
     <label for="quantity">Quantity:</label>
-    <input type="number" name="quantity" (change)="quantityChange($event)" value="{{cartProduct.quantity}}" min="1" max="9">
+    <input type="number" name="quantity" class="select-input" (change)="quantityChange($event)" value="{{cartProduct.quantity}}" min="1" max="9">
 </div>
