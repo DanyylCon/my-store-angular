@@ -1,15 +1,22 @@
+<div class="container">
+ 
+      <div class="image">
+         <img src="{{this.product.url}}">
+      </div> 
+      
+      <div class="details">
+         <h3>{{this.product.name}}</h3>
+         <strong>{{this.product.price}}</strong>
 
-<img src="{{this.product.url}}" style="width: 20em;">
-<br>
-<h3>{{this.product.name}}</h3>
-<strong>{{this.product.price}}</strong>
-<br>
-<p>{{this.product.description}}</p>
-<br>
-<select (change)="selectChange($event)" name="selectQuantity" >
-   <option *ngFor="let o of selectOptions">{{o}}</option>
-</select>
-<br>
-<button (click)="addProduct()">Add to Cart</button>
-<br>
-<a routerLink="/">Back to product list</a>
+         <p>{{this.product.description}}</p>
+
+         <select class="select-input" (change)="selectChange($event)" name="selectQuantity" >
+            <option *ngFor="let o of selectOptions">{{o}}</option>
+         </select>
+
+         <button (click)="addProduct()">Add to Cart</button>
+         
+         <a routerLink="/">Back to product list</a>
+      </div>
+
+</div>

@@ -1,16 +1,18 @@
-
-<div *ngFor="let product of products">
-    <a routerLink="/products/{{product.id}}"><img style="width: 20rem;" src="{{product.url}}"></a>
-    <br>
-    <strong>{{[product.name]}}</strong>
-    <br>
-    <strong>Price: {{product.price}}</strong>
-    <br>
-    <select (change)="selectChange($event)" name="selectQuantity" >
-        <option *ngFor="let o of selectOptions">{{o}}</option>
-    </select>
-    <br>
-    <button type="button" class="btn btn-primary" (click)="addProduct(product)">Add to Cart</button>
-    <br>
-    
+<div class="product-container">
+    <section class="product-index">
+        <div class="product-item-container" *ngFor="let product of products">
+            <a  routerLink="/products/{{product.id}}"><img class="product-image" style="width: 20rem;" src="{{product.url}}"></a>
+            <br>
+            <strong>{{[product.name]}}</strong>
+            <br>
+            <strong>Price: ${{product.price}}</strong>
+            <br>
+            <select class="select-input" (change)="selectChange($event)" name="selectQuantity" >
+                <option *ngFor="let o of selectOptions">{{o}}</option>
+            </select>
+            <br>
+            <button type="button" class="btn btn-primary" (click)="addProduct(product)">Add to Cart</button>
+            <br>        
+        </div>
+    </section>
 </div>
