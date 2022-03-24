@@ -1,13 +1,15 @@
-<h2>Order Submitted</h2>
-<p>
-    Thank you, {{customerName}}!
-</p>
-
-<p>
-    A total of <strong>${{orderTotal}}</strong> dollars will be charged to your creditcard.
-</p>
-
-<p>
-    Your order will be shipped to the address you have provided.
-</p>
-<button (click)="returnToProdList()">Back to product list</button>
+<div class="container">
+    <h2>Order Submitted</h2>
+    <p>
+        Thank you, {{customerName}}!
+    </p>
+    
+    <p>
+        A total of <strong>${{orderTotal}}</strong> dollars will be charged to your creditcard.
+    </p>
+    
+    <p>
+        Your order will be shipped to the address you have provided.
+    </p>
+    <button class="btn btn-warning" (click)="returnToProdList()">Back to product list</button>
+</div>
