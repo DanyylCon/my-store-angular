@@ -1,0 +1,19 @@
+.user-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-button{
+    margin-top: 15px;
+}
+
+.input-text{
+    width: 250px;
+}
+
+label{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

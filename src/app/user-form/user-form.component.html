@@ -1,15 +1,23 @@
-<form #form="ngForm" (ngSubmit)="submitForm()">
-    <label for="name">Full Name:</label>
-    <br>
-    <input type="text" name="name" required placeholder="Your full name"  [(ngModel)]="name">
-    <br>
-    <label for="address">Address:</label>
-    <br>
-    <input type="text" name="address" required placeholder="Your full address" [(ngModel)]="address" >
-    <br>
-    <label for="address">Credit Card Number:</label>
-    <br>
-    <input type="text" name="card" required minlength="16" maxlength="16" placeholder="Your 16 digit card number" [(ngModel)]="card" >
-    <br>
-    <input type="button" [disabled]="form.invalid" (click)="submitForm()" value="Submit">
-</form>
+<div class="user-form">
+    <form #form="ngForm" (ngSubmit)="submitForm()">
+        <label for="name">Full Name:</label>
+        <br>
+        <input type="text" class="input-text" name="name" required placeholder="Your full name"  [(ngModel)]="name">
+
+        <br>
+        
+        <label for="address">Address:</label>
+        <br>
+        
+        <input type="text" class="input-text" name="address" required placeholder="Your full address" [(ngModel)]="address" >
+        <br>
+        
+        <label for="address">Credit Card Number:</label>
+        <br>
+        
+        <input type="text" class="input-text" name="card" required minlength="16" maxlength="16" placeholder="Your 16 digit card number" [(ngModel)]="card" >
+        <br>
+        
+        <input type="button" class="btn btn-primary input-button" [disabled]="form.invalid" (click)="submitForm()" value="Submit">
+    </form>
+</div>
