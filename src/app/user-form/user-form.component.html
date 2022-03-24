@@ -2,14 +2,14 @@
     <form #form="ngForm" (ngSubmit)="submitForm()">
         <label for="name">Full Name:</label>
         <br>
-        <input type="text" class="input-text" name="name" required placeholder="Your full name"  [(ngModel)]="name">
+        <input type="text" class="input-text" name="name" required minlength="4" placeholder="Your full name (Min. 4 characters)"  [(ngModel)]="name">
 
         <br>
         
         <label for="address">Address:</label>
         <br>
         
-        <input type="text" class="input-text" name="address" required placeholder="Your full address" [(ngModel)]="address" >
+        <input type="text" class="input-text" name="address" required minlength="6" placeholder="Your full address (Min. 6 characters)" [(ngModel)]="address" >
         <br>
         
         <label for="address">Credit Card Number:</label>
