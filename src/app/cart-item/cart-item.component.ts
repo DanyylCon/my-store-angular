@@ -15,6 +15,8 @@ export class CartItemComponent implements OnInit {
   @Input() cartProduct: CartProduct = new CartProduct;
   //EventEmitter used to notify the parent component if the quantity changes
   @Output() quantityNotify: EventEmitter<any> = new EventEmitter;
+  //EventEmitter used to notify the parent of the product that must be removed
+  @Output() removedItemNotify: EventEmitter<any> = new EventEmitter;
   
   constructor(private productService: ProductsService, private cartService: CartService) { }
 
@@ -25,7 +27,6 @@ export class CartItemComponent implements OnInit {
 
     //get the new quantity from the number input
     let newQuantity = Number(event.target.value);
-
 
     if(newQuantity){
 
@@ -45,4 +46,9 @@ export class CartItemComponent implements OnInit {
       alert("Sorry, there was a problem with changing quantity. Please try again.");
     }
   }
+
+  removeFromCart(): void{
+    console.log('button works');
+  }
+
 }

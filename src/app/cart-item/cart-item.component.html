@@ -6,4 +6,6 @@
     <p>${{cartProduct.price}}</p>
     <label for="quantity">Quantity:</label>
     <input type="number" name="quantity" class="select-input" (change)="quantityChange($event)" value="{{cartProduct.quantity}}" min="1" max="9">
+    <br>
+    <button class="btn btn-danger btn-sm" (click)="removeFromCart()">Remove</button>
 </div>
