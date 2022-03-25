@@ -1,6 +1,6 @@
 <div class="container">
     <section class="cart-products">
-        <app-cart-item *ngFor="let item of cartProducts" [cartProduct]="item" (quantityNotify)="recalculateTotal()"></app-cart-item>
+        <app-cart-item *ngFor="let item of cartProducts" [cartProduct]="item" (quantityNotify)="refreshTotal()" (removedItemNotify)="refreshCart()"></app-cart-item>
     </section>
     
     <section class="user-form">

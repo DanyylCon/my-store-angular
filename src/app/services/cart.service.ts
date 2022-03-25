@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { ComponentFactoryResolver, Injectable } from '@angular/core';
 import { Product } from '../models/Product';
 import { CartProduct } from '../models/CartProduct';
 
@@ -34,6 +34,12 @@ export class CartService {
     
     this.calculateTotal();
 
+  }
+
+  removeProduct(cartProduct: CartProduct): void {
+    //using filter method remove the cartProduct that was passed from the cartItem commponent
+    this.cartProducts = this.cartProducts.filter(cp => cp.id != cartProduct.id);
+    this.calculateTotal();
   }
 
   //function to calculate total price in the cart

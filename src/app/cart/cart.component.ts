@@ -21,8 +21,14 @@ export class CartComponent implements OnInit {
   }   
 
   //recalculate the total when it is changed in the cartItem child component
-  recalculateTotal(): void{
+  refreshTotal(): void{
     this.total = this.cartService.total;
+  }
+
+  //refresh the cart once the item was removed
+  refreshCart(): void{
+    this.cartProducts = this.cartService.getCartProducts();
+    this.refreshTotal();
   }
 
 }
