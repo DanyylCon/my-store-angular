@@ -25,7 +25,7 @@ export class CartComponent implements OnInit {
     this.total = this.cartService.total;
   }
 
-  //refresh the cart once the item was removed
+  //refresh the cart and total once the item was removed
   refreshCart(): void{
     this.cartProducts = this.cartService.getCartProducts();
     this.refreshTotal();

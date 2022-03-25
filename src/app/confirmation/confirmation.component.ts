@@ -18,13 +18,11 @@ export class ConfirmationComponent implements OnInit {
     //receive the variables from cartService after they were set in userForm and Cart components
     this.customerName = this.cartService.customerName;
     this.orderTotal = this.cartService.total;
+    this.cartService.clearCart();
   }
 
   //when user clicks, empty out the cartProducts array, reset total, customerName and return to the main page
   returnToProdList(): void{
-    this.cartService.cartProducts = [];
-    this.cartService.total = 0;
-    this.cartService.customerName = '';
     this.router.navigate(['']);
   }
 

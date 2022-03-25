@@ -42,6 +42,12 @@ export class CartService {
     this.calculateTotal();
   }
 
+  clearCart(): void{
+    this.cartProducts = [];
+    this.total = 0;
+    this.customerName = '';
+  }
+
   //function to calculate total price in the cart
   calculateTotal(): void{
     this.total = 0;

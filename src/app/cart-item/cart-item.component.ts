@@ -48,10 +48,8 @@ export class CartItemComponent implements OnInit {
   }
 
   removeFromCart(): void{
-    //call remove method on cartService and filter the array inside there
-    //then emmit the event to the parent
-    //make sure the emitter is connected through html
-    //refresh the cart in the cart component
+    //call removeProduct function on cartService to remove this cartProduct
+    //Then emmit the event to the parent so it can refresh the cart
     this.cartService.removeProduct(this.cartProduct);
     this.removedItemNotify.emit();
   }
