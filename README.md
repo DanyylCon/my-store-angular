@@ -12,3 +12,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - Clone the project to your machine
 - run npm install in the terminal to install dependencies (Bootstrap is used)
 - run ng serve in the terminal to serve up the application on the address that will be displayed (Standard is http://localhost:4200/)
+
+
+## Credit
+
+Full Credit to Changhui Xu and the blog post they have written at https://codeburst.io/digit-only-directive-in-angular-3db8a94d80c3
+
+(For creating the directive which prevents user from entering, pasting, or droppping anything but numbers into input)

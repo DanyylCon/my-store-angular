@@ -12,6 +12,7 @@ import { CartItemComponent } from './cart-item/cart-item.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import { FormsModule } from '@angular/forms';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
+import { NumbersOnlyDirective } from './customDirectives/numbers-only.directive';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ConfirmationComponent } from './confirmation/confirmation.component';
     CartComponent,
     CartItemComponent,
     UserFormComponent,
-    ConfirmationComponent
+    ConfirmationComponent,
+    NumbersOnlyDirective
   ],
   imports: [
     BrowserModule,
